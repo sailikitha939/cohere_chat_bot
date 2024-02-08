@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Anthena</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Anthena</h1>
+        <form id="question-form" action="/analyze" method="post">
+            <label for="question">Enter your question:</label><br>
+            <input type="text" id="question" name="question"><br>
+            <button id="submit-btn" type="submit">Submit</button>
+        </form>
+        {% if question %}
+            <p>Your question: {{ question }}</p>
+        {% endif %}
+        {% if answer %}
+            <div class="answer-box">
+                <ul>
+                    {% for line in answer.split('\n') %}
+                        <li>{{ line }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        {% endif %}
+    </div>
+
+    <script>
+        document.getElementById('question-form').addEventListener('submit', function() {
+            document.getElementById('submit-btn').textContent = 'Analyzing the question...';
+        });
+    </script>
+</body>
+</html>

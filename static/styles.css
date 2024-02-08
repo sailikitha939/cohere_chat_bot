@@ -1,0 +1,54 @@
+.container {
+    text-align: center;
+}
+
+form {
+    width: 50%;
+    margin: 0 auto;
+}
+
+input[type="text"], button {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    box-sizing: border-box;
+}
+
+
+button {
+    background-color: #fafa50; 
+    color: black;
+    border: none;
+    cursor: pointer;
+}
+
+
+button:active {
+    background-color: #47c64b;
+}
+
+
+button:hover {
+    background-color: #27ff3d; 
+}
+
+.answer-box {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 20px auto; 
+    width: 50%; 
+    text-align: center;
+}
+
+.answer-box ul {
+    list-style-type: none; 
+}
+
+.answer-box ul li {
+    margin-bottom: 10px; 
+}
+
+h1 {
+    background-color: #faa81b;
+    padding: 10px;
+}
